@@ -1,10 +1,35 @@
-﻿using System.Numerics;
-namespace PTBac2
+﻿namespace CSharpBasic
 {
     class Program
     {
         static void Main(string[] Args)
         {
+
+        Console.WriteLine("Moi chon bai tap");
+        int chon = int.Parse(Console.ReadLine());
+        do
+        {   
+            switch (chon)
+            {
+                case 1 : 
+                {
+                    
+                }
+            }
+
+        } while ();     
+
+            Console.WriteLine("Nhập số a");
+           Double a = double.Parse(Console.ReadLine()); 
+           Console.WriteLine("Nhập số b");
+           Double b = double.Parse(Console.ReadLine());
+           Console.WriteLine("Nhập số c");
+           Double c = double.Parse(Console.ReadLine());
+
+           GiaiPTB2 giaiPhuongTrinh = new GiaiPTB2();
+
+           giaiPhuongTrinh.GiaiPT(a,b,c);
+
 
         }
     }
@@ -16,7 +41,7 @@ namespace PTBac2
          * @param b: he so bac 1
          * @param c: so hang tu do
         */
-        public void GiaiPT (float a, float b, float c)
+        public void GiaiPT (Double a, Double b, Double c)
         {
             if (a==0)
             {
@@ -31,9 +56,9 @@ namespace PTBac2
             }
 
             //Tinh delta 
-            float delta = (b * b) - (4 * a * c);
-            float x1;
-            float x2;
+            Double delta = (b * b) - (4 * a * c);
+            Double x1;
+            Double x2;
 
             // Tinh nghiem
             if (delta < 0)
@@ -43,12 +68,13 @@ namespace PTBac2
             else if (delta == 0)
             {
                 x1 = -(b / (2 * a));
-                Console.WriteLine($"Phuong trinh co nghiem kep x1 = x2 = {0}", x1);
+                Console.WriteLine($"Phuong trinh co nghiem kep x1 = x2 = {x1}");
             }
             else
             {
-                x1 = (float) (-b + Math.Sqrt(delta)) / (2 * a);
-                x1 = (float)(-b - Math.Sqrt(delta)) / (2 * a);
+                x1 = (Double) (-b + Math.Sqrt(delta)) / (2 * a);
+                x2 = (Double)(-b - Math.Sqrt(delta)) / (2 * a);
+                Console.WriteLine($"Nghiem cua phuong trinh la: x1 = {x1}, x2 = {x2}");
             }
         }
     }
