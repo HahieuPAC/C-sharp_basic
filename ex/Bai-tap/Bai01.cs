@@ -7,8 +7,14 @@ namespace Bai01
          * @param b: he so bac 1
          * @param c: so hang tu do
         */
-        public void GiaiPT (Double a, Double b, Double c)
+        public void GiaiPT ()
         {
+            Console.WriteLine("Nhap so a");
+            double a = double.Parse(Console.ReadLine());
+            Console.WriteLine("Nhap so b");
+            double b = double.Parse(Console.ReadLine());
+            Console.WriteLine("Nhap so c");
+            double c = double.Parse(Console.ReadLine());
             if (a==0)
             {
                 if (b==0)
