@@ -1,6 +1,7 @@
 ﻿using Bai01;
 using Bai02;
 using Bai03;
+using Bai04;
 using System.Runtime.CompilerServices;
 
 namespace CSharpBasic
@@ -16,6 +17,7 @@ namespace CSharpBasic
                 Console.WriteLine("1 - Bai tap 01 (Chuong trinh giai phuong trinh bac 2)");
                 Console.WriteLine("2 - Bai tap 02 (Chuong trinh tim UCLN va BCNN)");
                 Console.WriteLine("3 - Bai tap 03 (Viet tat ca cac so nguyn to nho hon n)");
+                Console.WriteLine("4 - Bai tap 04 (Viet tat chuong trinh liet ke n so nguyen to dau tien)");
                 chon = int.Parse(Console.ReadLine());
 
                 switch (chon)
@@ -35,6 +37,11 @@ namespace CSharpBasic
                     case 3 :
                     BaiTap03 snt = new BaiTap03();
                     snt.FindSNT();
+                    break;
+
+                    case 4 :
+                    BaiTap04 snt4 = new BaiTap04();
+                    snt4.FindSNT();
                     break;
                 }
 
