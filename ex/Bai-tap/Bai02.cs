@@ -27,13 +27,23 @@ namespace Bai02
             }    
             while (a != b && foundUCLN==false)
             {
+                double BCNN;
+                double UCLN;
                 if (a > b)
                 {
                     double SoDu = a % b;
+                    
                     switch ( SoDu)
                     {
                         case 0: Console.WriteLine($"UCLN cua {a_init} va {b_init} la: {b}");
                             foundUCLN = true; 
+                            if (foundUCLN = true)
+                            {
+                                UCLN = b;
+                                BCNN = (a_init * b_init) / UCLN;
+                                Console.WriteLine($"BCNN cua {a_init} va {b_init} la: {BCNN}");
+                            }
+                            
                         break;
 
                         default: a = b;
@@ -49,6 +59,12 @@ namespace Bai02
                         case 0:
                             Console.WriteLine($"UCLN cua {a_init} va {b_init} la: {a}");
                             foundUCLN = true;
+                              if (foundUCLN = true)
+                            {
+                                UCLN = a;
+                                BCNN = (b_init * a_init) / UCLN;
+                                Console.WriteLine($"BCNN cua {a_init} va {b_init} la: {BCNN}");
+                            }
                             break;
                         default: b = a;
                             a = SoDu;
@@ -56,11 +72,6 @@ namespace Bai02
                     }
                 } 
             }
-
-        }
-
-        public void BCNN()
-        {
 
         }
     }
